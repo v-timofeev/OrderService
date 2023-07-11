@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using OrderService.Api.Data;
+
 namespace OrderService.Api
 {
     public class Program
@@ -10,6 +13,7 @@ namespace OrderService.Api
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+            builder.Services.AddDbContext<OrdersContext>(opt => opt.UseInMemoryDatabase("Orders"));
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
