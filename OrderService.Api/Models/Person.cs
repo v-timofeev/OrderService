@@ -1,8 +1,10 @@
-﻿namespace OrderService.Api.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace OrderService.Api.Models
 {
     public class Person
     {
-        public int Id { get; set; }
-        public string? FullName { get; set; }   
+        [Required] public string? FullName { get; set; }
+        [Required] public string? FullAddress { get; set; }
     }
 }
