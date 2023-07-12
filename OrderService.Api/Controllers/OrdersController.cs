@@ -52,7 +52,7 @@ namespace OrderService.Api.Controllers
 
         // POST: api/v1/orders
         [HttpPost]
-        public async Task<ActionResult<Guid>> PostOrder([FromBody] Order order)
+        public async Task<ActionResult<Guid>> CreateOrder([FromBody] Order order)
         {
             if (_context.Orders == null)
             {
